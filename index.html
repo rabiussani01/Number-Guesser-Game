@@ -1,0 +1,49 @@
+<!--
+    Author: Mohammad Rabius Sani
+    Date: September 24, 2023
+    Copyright © 2023 Mohammad Rabius Sani. All rights reserved.
+
+    Description: 
+    Welcome to an exciting number guessing game created by Mohammad Rabius Sani. In this game, users can test their intuition by guessing a number between 1 and 10. The game comes with user-friendly input validation, tracks the number of attempts, displays a history of previous guesses, and provides informative feedback messages. The captivating background features a tasteful blend of a blurred image with a subtle reduction in opacity, enhancing the overall gaming experience.
+
+    Languages: 
+    - HTML
+    - CSS (Tailwind CSS for styling)
+    - JavaScript
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Number Guesser Game</title>
+</head>
+<body class="flex items-center justify-center min-h-screen relative">
+    <!-- Background image container with custom inline styles -->
+    <div class="absolute top-0 left-0 w-full h-full" style="background-image: url('img/bg6.jpg'); background-size: cover; filter: blur(3px); opacity: 0.5;"></div>
+
+    <!-- Main section with shadow -->
+    <div class="bg-white p-8 rounded-lg shadow-2xl border-2 border-black relative">
+        <h1 class="text-3xl font-semibold mb-4 text-center">Number Guesser</h1>
+        <p class="mb-4 text-center">Guess the number between 1 and 10:</p>
+        <div class="flex justify-center items-center space-x-4">
+            <input id="guessInput" class="w-28 px-2 py-1 rounded-lg border" type="number" min="1" max="10" placeholder="Input Number">
+            <button id="guessButton" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+                Guess
+            </button>
+        </div>
+        <div class="mt-4" id="message"></div>
+        <div class="mt-4" id="attempts">Attempts: <span id="attemptsNum">0</span></div>
+        <div class="mt-4" id="previousGuesses">Previous Guesses: <span id="guessList"></span></div>
+        <div class="mt-4 text-center">
+            <button id="resetButton" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                Reset Game
+            </button>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
